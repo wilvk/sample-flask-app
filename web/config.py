@@ -6,8 +6,8 @@ class BaseConfig(object):
     SECRET_KEY = "changeme"
     DEBUG = os.environ['DEBUG']
     DB_NAME = "postgres"
-    DB_USER = "postgres"
-    DB_PASS = "postgres"
+    DB_USER = os.environ['DB_USER']
+    DB_PASS = os.environ['DB_PASS']
     DB_SERVICE = "postgres"
     DB_PORT = "5432" 
     SQLALCHEMY_DATABASE_URI = 'postgresql://{0}:{1}@{2}:{3}/{4}'.format(
